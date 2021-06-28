@@ -1,0 +1,5 @@
+# Best restaurants for given visitor (pandas)
+
+A CSV file (sf-restaurants.csv) contains a list of restaurants in San Francisco with their latitudes and longitudes, ratings (on a scale of 1 to 5) and their time-slots of operation. A restaurant can serve breakfast (8 am - 11 am), lunch (12 pm - 3 pm), or dinner (6:30 pm to 9:30 pm). For someone visiting San Francisco, you need to recommend the top three restaurants nearest to the visitor’s current location (in a 1-mile radius) for the current time-slot, based on restaurant ratings. Restaurants with higher ratings should be higher up on the recommendation list, and for multiple restaurants with the same rating, restaurants closer to the visitor should be recommended first. The visitor’s current location (latitude and longitude), and time of the day (24-hour format) will be given as input (visitor-locations-times.csv).
+
+The pseudo formula for calculating the shortest distance between two lat/lng pairs in miles is: rad2deg(acos(sin(deg2rad(lat1)) * sin(deg2rad(lat2)) +  cos(deg2rad(lat1)) * cos(deg2rad(lat2)) * cos(deg2rad(lon1 - lon2)))) * 60 * 1.1515
